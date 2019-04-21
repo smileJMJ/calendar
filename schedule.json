@@ -1,0 +1,139 @@
+{
+	"schedule":[
+		{
+			"seq":0,
+			"title":"다산 자이 티저 오픈",
+			"writeDate":"2017-11-11",
+			"startDate":"2017-11-11",
+			"endDate":"2017-11-20",
+			"bgcolor":"#4286f4",
+			"status":"use"
+		},
+		{
+			"seq":1,	
+			"title":"다산 자이 본사이트 오픈",
+			"writeDate":"2017-02-02",
+			"startDate":"2017-02-04",
+			"endDate":"2017-02-10",
+			"bgcolor":"#e0a03a",
+			"status":"use"
+		},
+		{
+			"seq":2,
+			"title":"신반포자이 티저 오픈",
+			"writeDate":"2017-03-05",
+			"startDate":"2017-03-05",
+			"endDate":"2017-03-20",
+			"bgcolor":"#4dad1a",
+			"status":"use"
+		},
+		{
+			"seq":3,
+			"title":"신반포자이 본사이트 오픈",
+			"writeDate":"2017-08-15",
+			"startDate":"2017-08-15",
+			"endDate":"2017-08-25",
+			"bgcolor":"#a51822",
+			"status":"use"
+		},
+		{
+			"seq":4,
+			"title":"DMC 에코 자이 티저 오픈",
+			"writeDate":"2017-05-05",
+			"startDate":"2017-05-15",
+			"endDate":"2017-05-25",
+			"bgcolor":"#f2e204",
+			"status":"use"
+		},
+		{
+			"seq":6,
+			"title":"MH 오픈",
+			"writeDate":"2017-07-02",
+			"startDate":"2017-07-05",
+			"endDate":"2017-07-10",
+			"bgcolor":"#6270db",
+			"status":"use"
+		},
+		{
+			"seq":7,
+			"title":"본사이트 오픈",
+			"writeDate":"2017-04-10",
+			"startDate":"2017-04-11",
+			"endDate":"2017-04-16",
+			"bgcolor":"#e06126",
+			"status":"use"
+		},
+		{
+			"seq":8,
+			"title":"자이01 티저 오픈",
+			"writeDate":"2017-09-01",
+			"startDate":"2017-09-01",
+			"endDate":"2017-09-10",
+			"bgcolor":"#abe025",
+			"status":"use"
+		},
+		{
+			"seq":14,
+			"title":"자이 07 본사이트 오픈",
+			"writeDate":"2017-09-01",
+			"startDate":"2017-09-01",
+			"endDate":"2017-09-30",
+			"bgcolor":"#fe8e8e",
+			"status":"use"
+		},
+		{
+			"seq":9,
+			"title":"자이02 본사이트 오픈",
+			"writeDate":"2017-06-10",
+			"startDate":"2017-06-15",
+			"endDate":"2017-06-30",
+			"bgcolor":"#24e095",
+			"status":"use"
+		},
+		{
+			"seq":9,
+			"title":"자이08",
+			"writeDate":"2017-09-10",
+			"startDate":"2017-09-12",
+			"endDate":"2017-09-15",
+			"bgcolor":"#dddddd",
+			"status":"use"
+		},
+		{
+			"seq":10,
+			"title":"자이 03 MH 오픈",
+			"writeDate":"2017-09-17",
+			"startDate":"2017-09-17",
+			"endDate":"2017-09-30",
+			"bgcolor":"#01727f",
+			"status":"use"
+		},
+		{
+			"seq":10,
+			"title":"자이 03 MH 오픈",
+			"writeDate":"2017-09-12",
+			"startDate":"2017-09-12",
+			"endDate":"2017-09-16",
+			"bgcolor":"#f975fd",
+			"status":"use"
+		},
+		{
+			"seq":12,
+			"title":"자이 05 MH 오픈",
+			"writeDate":"2017-10-05",
+			"startDate":"2017-10-05",
+			"endDate":"2017-10-11",
+			"bgcolor":"#7c007f",
+			"status":"use"
+		},
+		{
+			"seq":13,
+			"title":"자이 06 본사이트 오픈",
+			"writeDate":"2017-01-01",
+			"startDate":"2017-01-01",
+			"endDate":"2017-01-12",
+			"bgcolor":"#7f000c",
+			"status":"use"
+		}
+	]
+}

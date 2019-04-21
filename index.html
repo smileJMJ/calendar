@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title></title>
+<link rel="stylesheet" href="common/css/style.css"/>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<title>FullCalendar Test</title>
+</head>
+<body>
+<div class="wrap">
+<div class="con_box">
+	<div class="calendar_wrap" id="calendar">
+		<div class="calendar_top">
+			<button class="btn_dir prev"></button>
+			<h4></h4>
+			<button class="btn_dir next"></button>
+			<button class="today">TODAY</button>
+		</div>
+		<!--// calendar_top-->
+
+		<div class="calendar_con">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<caption></caption>
+				<thead>
+					<!-- 요일 설정 -->
+					<tr></tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<!--// calendar_con-->
+	</div>
+	<!--// calendar_wrap-->
+
+	<div class="schedule_wrap">
+		<div class="schedule_form">
+			<table class="tbl th_ver" border="0" cellpadding="0" cellspacing="0">
+	            <caption></caption>
+	            <colgroup>
+	                <col width="30%" />
+	                <col width="70%" />
+	            </colgroup>	
+	            <tbody>
+	            	<tr>
+	            		<th scope="row">일정명</th>
+	            		<td><input type="text" id="sTitle"/></td>
+	            	</tr>
+	            	<tr>
+	            		<th scope="row">등록일</th>
+	            		<td class="write_date"></td>
+	            	</tr>
+	            	<tr>
+	            		<th scope="row">시작일</th>
+	            		<td>
+	            			<span class="datepicker">
+                                <input type="text" id="startDate" style="width:30%;" />
+                            </span>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<th scope="row">종료일</th>
+	            		<td>
+							<span class="datepicker">
+                                <input type="text" id="endDate" style="width:30%;" />
+                            </span>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<th scope="row">색상</th>
+	            		<td>
+	            			<input type="text" id="sBg"/>
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<th scope="row">상태</th>
+	            		<td>
+	            			<div class="style_select" style="width:80%;">
+	                            <label>
+	                                <span></span>
+	                                <select name="">
+	                                    <option value="사용" selected>사용</option>
+	                                    <option value="중지">중지</option>
+	                                </select>
+	                            </label>
+	                        </div>
+	                        <!--// style_select-->
+	            		</td>
+	            	</tr>
+	            </tbody>
+            </table>
+		</div>
+		<!--// schedule_form-->
+
+		<div class="btn_area center">
+			<a href="#" class="btn full_gray cancel">취소</a>
+			<a href="#" class="btn full_skyblue regist">저장</a>
+		</div>
+		<!--// btn_area-->
+	</div>
+	<!--// schedule_wrap-->
+</div>
+<!--// con_box-->	
+</div>
+
+<script type="text/javascript" src="common/js/spectrum.js"></script>
+<script type="text/javascript" src="common/js/front.js"></script>
+<script type="text/javascript">
+$(function(){
+	var calendar = calendarMake({
+		ele:"#calendar",			// 달력 그리는 영역
+		scheEle:".schedule_wrap",		// 일정등록 레이어 영역
+		day:["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
+		today:{						// 오늘 날짜 서버시간 체크해서 넣어주세요
+			year:2017,
+			month:9,
+			date:20
+		},
+		registArea:".schedule_wrap"
+	});
+
+	$.ajax({
+		type:"GET",
+		url:"schedule.json",
+		dataType:"json",
+		success:function(res){
+			sDataParsing.init(res.schedule);		// 날짜 데이터 파싱
+			calendar.drawMonthData(9);				// 출력하고 싶은 월 파라미터로 넣기
+		},
+		fail:function(xhr, status, error){
+			console.log(error);
+		}
+	});
+
+});	
+</script>
+</body>
+</html>

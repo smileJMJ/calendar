@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import url("spectrum.css");
+@import url("fullcalendar.css");
+
+* {margin:0; padding:0; box-sizing:border-box;}
+a {text-decoration:none;}
+
+/*	TABLE   */
+.tbl {width:100%;}
+.tbl th {padding:10px 0; font-size:14px; color:#222; text-align:center; background:#ebebeb; vertical-align:middle;}
+.tbl td {position:relative; padding:10px 15px; font-size:13px; color:#888; text-align:center; word-break:break-word; border-right:1px solid #ebebeb; border-bottom:1px solid #ebebeb; vertical-align:middle;}
+.tbl th.tbl_tit {background:#ddd;}
+.tbl td .style_check, .tbl td .style_select {display:inline-block; vertical-align:middle;}
+.tbl td .btn.rank {width:40%; max-width:30px;}
+.tbl td .btn.single {width:80%;}
+
+.tbl.ta_left td {text-align:left;}
+
+.tbl.tr_hover tr:hover, .tbl.tr_hover tr.on {background:rgba(0,192,239,0.2);}
+
+.tbl td.all_check {font-family:NotoSanskr_Medium; color:#222; background:#f2f2f2;}
+.tbl td textarea {width:90%; height:100px; padding:10px; font-family:"NotoSanskr_Demilight"; font-size:13px; line-height:20px; border:1px solid #ccc; }
+.tbl td .description {margin-top:8px;}
+
+.th_ver {border-top:1px solid #ebebeb;}
+.th_ver tbody th {border-right:1px solid #fff; border-bottom:1px solid #fff;}
+
+.style_select {display:inline-block; min-width:100px; vertical-align:middle;}
+.style_select>label {display:block; overflow:hidden; position:relative; height:30px; padding-left:8px; padding-right:42px; line-height:30px; background:#fff; border:1px solid #ddd; vertical-align:top;}
+.style_select>label::before {display:block; content:''; position:absolute; right:30px; top:0; width:1px; height:30px; background:#ddd;}
+.style_select>label::after {
+	display:block; 
+	content:''; 
+	position:absolute; 
+	right:11px; 
+	top:13px; 
+	width:0; 
+	height:0; 
+	border:4px solid #47c977; 
+	border-left-color:transparent; 
+	border-right-color:transparent; 
+	border-bottom-color:transparent;
+	transition:all .3s;
+}
+.style_select>label>span {display:block; font-size:13px; color:#999;}
+.style_select>label>select {position:absolute; left:-1px; top:-1px; z-index:100; width:100%; height:30px; opacity:0;}
+
+.style_select>label.on {border:1px solid #00c0ef;}
+.style_select>label.on>span {color:#00c0ef;}
+.style_select>label.on::before {background:#00c0ef;}
+.style_select>label.on::after {
+	top:8px;
+	border:4px solid #f35958; 
+	border-left-color:transparent; 
+	border-right-color:transparent; 
+	border-top-color:transparent;
+}
+
+.datepicker button {margin-left:5px; font-size:18px; vertical-align:middle; background:transparent; border:0; cursor:pointer;}
+
+/*	FORM   */
+input[type=text], input[type=password] {width:100%; height:30px; padding:0 5px; line-height:30px; background:#fff; border:1px solid #ddd;}
+input[type=text]:focus, input[type=password]:focus {border:1px solid #00c0ef;}
+
+/*	BUTTON */
+.btn_area {margin-top:30px; text-align:right;}
+.btn_area.top {margin-top:0; margin-bottom:15px;}
+.btn_area.center {text-align:center;}
+
+.btn {display:inline-block; position:relative; width:100px; height:40px; text-align:center; font-size:16px; line-height:40px;}
+ button.btn {padding:0; border:0; font-family:"NotoSanskr_Regular"; vertical-align:middle; cursor:pointer;}
+.btn.small {height:30px; line-height:30px; font-size:14px;}
+.btn.add, .btn.remove {width:30px; margin-left:3px;}
+.btn.add::after {display:block; content:'\f067'; position:absolute; left:9px; top:0; font-family:FontAwesome; color:#fff;}
+.btn.remove::after {display:block; content:'\f068'; position:absolute; left:9px; top:0; font-family:FontAwesome; color:#fff;}
+.btn.circle {border-radius:13px;}
+.btn.full_skyblue {color:#fff; background:#00c0ef; border:1px solid #00c0ef;}
+.btn.skyblue {color:#00c0ef; background:#fff; border:1px solid #00c0ef;}
+.btn.full_darkblue {color:#fff; background:#095573; border:1px solid #095573;}
+.btn.full_gray {color:#fff; background:#999; border:1px solid #999;}
+
+
+/*------------------------------------------------------------------------------*/
+
+
+.wrap {padding:30px;}
+
+.con_box {overflow:hidden; position:relative; box-sizing:border-box; width:100%; min-width:1200px;}
+.calendar_wrap {width:100%;}
+
+.calendar_top {width:100%; text-align:center;}
+.calendar_top h4 {display:inline-block; vertical-align:middle; font-size:30px; color:#222;}
+.calendar_top button {height:28px; padding:0; color:#aaa; text-align:center; line-height:28px; vertical-align:middle; background:transparent; border:2px solid #aaa; cursor:pointer;}
+.calendar_top button.btn_dir {width:28px;}
+.calendar_top button.today {width:57px; color:#fff; background:#aaa;}
+
+.calendar_con table {width:100%; table-layout:fixed;}
+.calendar_con table thead th {width:14.2857%; height:45px; font-size:13px; color:#666; text-align:center; vertical-align:middle; border-top:1px solid #aaa; border-bottom:1px solid #aaa; border-right:1px solid #ddd;}
+.calendar_con table thead th:first-child {border-left:1px solid #ddd;}
+.calendar_con table thead th.sunday {color:#f35958;}
+.calendar_con table thead th.saturday {color:#00c0ef;}
+.calendar_con table tbody td {position:relative; width:14.2857%; height:105px; border-right:1px solid #ddd; border-bottom:1px solid #ddd; cursor:pointer;}
+.calendar_con table tbody td.none {cursor:default;}
+.calendar_con table tbody td:first-child {border-left:1px solid #ddd;} 
+.calendar_con table tbody td.today {background:#f5f5f5;}
+.calendar_con table tbody td.today::before {display:block; content:''; position:absolute; left:-1px; top:-1px; z-index:1; width:100%; height:100%; border:1px solid #888;}
+.calendar_con table tbody td>strong {position:absolute; left:10px; top:10px; font-size:12px; color:#666;}
+.calendar_con table tbody td.sunday>strong {color:#f35958;}
+.calendar_con table tbody td.saturday>strong {color:#00c0ef;}
+.calendar_con table tbody td>a.badge {display:block; position:relative; z-index:10; width:80%; height:24px; padding:0 5px; margin:0 auto 5px;}
+.calendar_con table tbody td>a.badge::after {display:block; content:''; position:absolute; width:0; height:0; border-width:12px; border-style:solid; border-color:inherit;}
+.calendar_con table tbody td>a.badge.start::after {left:-25px; top:-1px; border-top-color:transparent; border-left-color:transparent; border-bottom-color:transparent;}
+.calendar_con table tbody td>a.badge.end {text-align:right;}
+.calendar_con table tbody td>a.badge.end::after {right:-25px; top:-1px; border-top-color:transparent; border-right-color:transparent; border-bottom-color:transparent;}
+.calendar_con table tbody td .no_badge_area {position:absolute; left:0; top:8px; z-index:10; width:100%; padding-right:10px; text-align:right;}
+.calendar_con table tbody td .no_badge_area .no_badge {display:inline-block; width:12px; height:12px; margin-left:5px; border-radius:50%;}
+.calendar_con table tbody td .no_badge_area .no_badge:first-child {margin-left:0;}
+.calendar_con table tbody td>a>span {display:block; overflow:hidden; width:100%; font-size:12px; color:#fff; line-height:24px; text-overflow:ellipsis; white-space:nowrap;}
+
+.schedule_wrap {display:none; opacity:0; visibility:hidden; position:absolute; right:-40%; top:40px; width:38%;}
+
+
