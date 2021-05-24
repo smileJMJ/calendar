@@ -100,12 +100,13 @@
 			<a href="#" class="btn full_skyblue regist">저장</a>
 		</div>
 		<!--// btn_area-->
-	</div>
+	 </div>
 	<!--// schedule_wrap-->
 </div>
 <!--// con_box-->	
 </div>
-
+<script type="text/javascript" src="common/js/moment.min.js"></script>
+<script type="text/javascript" src="common/js/fullcalendar.js"></script>
 <script type="text/javascript" src="common/js/spectrum.js"></script>
 <script type="text/javascript" src="common/js/front.js"></script>
 <script type="text/javascript">
@@ -121,6 +122,11 @@ $(function(){
 		},
 		registArea:".schedule_wrap"
 	});
+$(function(){
+	scheduleRegist.init();			// 일정 등록 관리 초기화
+
+	ajaxData();
+});
 
 	$.ajax({
 		type:"GET",
