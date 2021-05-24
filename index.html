@@ -46,15 +46,15 @@
 	            </colgroup>	
 	            <tbody>
 	            	<tr>
-	            		<th scope="row">개비수</th>
+	            		<th scope="row">목표 개비수</th>
 	            		<td><input type="text" id="sTitle"/></td>
 	            	</tr>
 	            	<tr>
-	            		<th scope="row">등록일</th>
+	            		<th scope="row">핀개비수</th>
 	            		<td class="write_date"></td>
 	            	</tr>
 	            	<tr>
-	            		<th scope="row">시작일</th>
+	            		<th scope="row">등록일</th>
 	            		<td>
 	            			<span class="datepicker">
                                 <input type="text" id="startDate" style="width:30%;" />
@@ -62,7 +62,7 @@
 	            		</td>
 	            	</tr>
 	            	<tr>
-	            		<th scope="row">종료일</th>
+	            		<th scope="row">목표 성공/실패</th>
 	            		<td>
 							<span class="datepicker">
                                 <input type="text" id="endDate" style="width:30%;" />
@@ -115,9 +115,9 @@ $(function(){
 		scheEle:".schedule_wrap",		// 일정등록 레이어 영역
 		day:["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
 		today:{						// 오늘 날짜 서버시간 체크해서 넣어주세요
-			year:2017,
-			month:9,
-			date:20
+			year:2021,
+			month:5,
+			date:25
 		},
 		registArea:".schedule_wrap"
 	});
@@ -128,7 +128,7 @@ $(function(){
 		dataType:"json",
 		success:function(res){
 			sDataParsing.init(res.schedule);		// 날짜 데이터 파싱
-			calendar.drawMonthData(9);				// 출력하고 싶은 월 파라미터로 넣기
+			calendar.drawMonthData(5);				// 출력하고 싶은 월 파라미터로 넣기
 		},
 		fail:function(xhr, status, error){
 			console.log(error);
